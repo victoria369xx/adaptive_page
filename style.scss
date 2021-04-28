@@ -441,6 +441,15 @@ margin-top: 18px;
 }
 
 @media (max-width:768px){
+    @mixin container {
+        max-width: 768px;
+        margin: 0 auto; 
+    }
+
+    .header {
+        @include container();
+        width: 100%;
+    }
     
     .top_banner__big-text {
         font-size: 27px;
@@ -493,6 +502,13 @@ margin-top: 18px;
     .subscribe__action {
         margin-top: 5%;
 
+    }
+    .footer__flex {
+        width: 768px;
+        @include container();
+    }
+    .footer__flex-right {
+        margin-right: 50px;
     }
 }
 
@@ -553,6 +569,7 @@ margin-top: 18px;
     .subscribe__flex-right {
         margin-right: 10%;
     }
+    
     .footer__flex {
         flex-direction: column-reverse;
         align-items: center;
